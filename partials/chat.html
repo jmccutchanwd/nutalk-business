@@ -1,0 +1,13 @@
+<div>
+  <h2>Chat</h2>
+  <p>Name : <input type="text" ng-model="newmessage.user"></p>
+  <p>Message : <input type="text" ng-model="newmessage.text"></p>
+  <button ng-click="sendMessage(newmessage)">Submit</button>
+  <ul>
+    <li ng-repeat="message in messages">
+      {{message.user}}: {{message.text}}
+    </li>
+  </ul>
+  <button class="btn btn-success" ng-click="chatSend()">Submit</button>
+  <button class="btn btn-danger" ng-click="logout()">Close Chat</button>
+</div>
